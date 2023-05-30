@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import request from '../../utils/request.js'
 import { Performance, Minus, Square, Close, OverallReduction, Search } from '@icon-park/vue-next'
 import { ref } from 'vue'
 export default {
@@ -37,7 +38,11 @@ export default {
     OverallReduction,
     Search
   },
-  setup() {
+  setup () {
+    request({
+      method: 'GET',
+      url: `/search?keywords=海阔天空`
+    })
     const maxSize = ref(false)
     const minimizeWinClick = async () => {
       window.electron.mainWindowMin()
