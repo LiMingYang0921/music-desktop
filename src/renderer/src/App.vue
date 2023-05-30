@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Header from './layout/Header.vue'
+import Header from './layout/header/Header.vue'
 import { ElConfigProvider } from 'element-plus'
 
 const zIndex = 3000
@@ -9,10 +9,7 @@ const size = 'small'
 <template>
   <el-config-provider :size="size" :z-index="zIndex">
     <Header />
-    <div>123</div>
   </el-config-provider>
 </template>
 
-<style lang="less">
-@import './assets/css/styles.less';
-</style>
+<style></style>
